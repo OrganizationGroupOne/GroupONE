@@ -5,25 +5,61 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script language="javascript" type="text/javascript" src="forminputvalidator.js"></script>
+        <style>
+        
+            .background{
+                background-color:  #B2E6FF;
+                color: white;
+                margin: 20px;
+                padding: 20px
+            }
+            /*
+            .input{
+                margin-right: 175px
+            }
+            */
+            h1{
+                text-align: center;
+                font-size: 22px;
+            }
+            /*
+            label{
+                display: inline-block;
+                float: right;
+                clear: right;
+                width: 250px;
+                text-align: left;
+            }
+            */
+            select{
+                position: absolute;
+                left: 200px;
+            }
+            input {
+                display: inline-block;
+                position: absolute;
+                left: 200px;
+                clear: right;
+                
+            }
+            fieldset{
+              
+            }
+        </style>
     </head>
     <body>
-        <form name="bookadd" action="http://martinakraus.net/createBookEntry.php" method="get" onsubmit="return chkBookAddFormular()"> 
-            Vorname : <input type="text" name="vorname" /><br/><br/>
-            Nachname : <input type="text" name="nachname" /><br/><br/>
+        <div class="background">
+        <h1>Buch anlegen</h1>
+        <form name="bookadd" action="http://martinakraus.net/createBookEntry.php" method="get" onsubmit="return chkBookAddFormular()" autocomplete="on"> 
+            <fieldset>
+            <legend> Personalinformation</legend>
             Buchtitel: <input type="text" name="titel" /><br/><br/>
             Buchautor : <input type="text" name="autor" /><br/><br/>
             ISBN : <input type="number" name="isbn" /><br/><br/>
-            Genre : 
-            <br/>
-            <input type="checkbox" name="genre" value="Horror" checked="checked"><label>Horror</label><br/>
-            <input type="checkbox" name="genre" value="Psycho"><label>Psycho</label><br/>
-            <input type="checkbox" name="genre" value="Krimi"><label>Krimi</label><br/>
-            <input type="checkbox" name="genre" value="Doku"><label>Doku</label><br/>
-            <input type="checkbox" name="genre" value="Komödie"><label>Komödie</label><br/>
-            <input type="checkbox" name="genre" value="Romanze"><label>Romanze</label><br/>
-            <br/><br/>
-            Art des Buches : 
-            <select name="art">
+            Kapitel : <input type="number" name="kapitel" /><br/><br/>
+            Erscheinungsjahr : <input type="number" name="jahr" /><br/><br/>
+            Auflage : <input type="number" name="auflage" /><br/><br/>
+            Art des Buches: <select name="art">
                 <option>eBook</option>
                 <option>Newspaper</option>
                 <option>Taschenbuch</option>
@@ -31,13 +67,24 @@
                 <option selected="selected">Hardcover</option>
                 <option>Paperback</option>
             </select><br/><br/>
-            Kapitel : <input type="number" name="kapitel" /><br/><br/>
-            Erscheinungsjahr : <input type="number" name="jahr" /><br/><br/>
-            Auflage : <input type="number" name="auflage" /><br/><br/>
+            Genre  
+            <br/>
+            <input type="checkbox" name="genre" value="Horror" checked="checked"><label>Horror</label><br/>
+            <input type="checkbox" name="genre" value="Psycho"><label>Psycho</label><br/>
+            <input type="checkbox" name="genre" value="Krimi"><label>Krimi</label><br/>
+            <input type="checkbox" name="genre" value="Doku"><label>Doku</label><br/>
+            <input type="checkbox" name="genre" value="Komödie"><label>Komödie</label><br/>
+            <input type="checkbox" name="genre" value="Romanze"><label>Romanze</label><br/>
+            </fieldset>
+            <br/><br/>
+            <fieldset><legend>Art des Buches : </legend>
             Favorit makieren : <input type="checkbox" name="filmfavorit" /><br/><br/>
 
-
-            <input type="submit" value="senden"/>
+             Vorname : <input type="text" name="vorname"/><br/><br/>
+             Nachname : <input type="text" name="nachname" /><br/><br/>
+            <input type="submit" value="Absenden" onclick="alert('erfolgreich gesendet')"/>
+            </fieldset>
         </form>
+        </div>
     </body>
 </html>
