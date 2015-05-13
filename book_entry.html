@@ -4,87 +4,53 @@
         <title>Bucheintrag</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="generalstyle.css"/>
         <script language="javascript" type="text/javascript" src="forminputvalidator.js"></script>
-        <style>
-        
-            .background{
-                background-color:  #B2E6FF;
-                color: white;
-                margin: 20px;
-                padding: 20px
-            }
-            /*
-            .input{
-                margin-right: 175px
-            }
-            */
-            h1{
-                text-align: center;
-                font-size: 22px;
-            }
-            /*
-            label{
-                display: inline-block;
-                float: right;
-                clear: right;
-                width: 250px;
-                text-align: left;
-            }
-            */
-            select{
-                position: absolute;
-                left: 200px;
-            }
-            input {
-                display: inline-block;
-                position: absolute;
-                left: 200px;
-                clear: right;
-                
-            }
-            fieldset{
-              
-            }
-        </style>
+
     </head>
     <body>
-        <div class="background">
         <h1>Buch anlegen</h1>
         <form name="bookadd" action="http://martinakraus.net/createBookEntry.php" method="get" onsubmit="return chkBookAddFormular()" autocomplete="on"> 
-            <fieldset>
-            <legend> Personalinformation</legend>
-            Buchtitel: <input type="text" name="titel" /><br/><br/>
-            Buchautor : <input type="text" name="autor" /><br/><br/>
-            ISBN : <input type="number" name="isbn" /><br/><br/>
-            Kapitel : <input type="number" name="kapitel" /><br/><br/>
-            Erscheinungsjahr : <input type="number" name="jahr" /><br/><br/>
-            Auflage : <input type="number" name="auflage" /><br/><br/>
-            Art des Buches: <select name="art">
-                <option>eBook</option>
-                <option>Newspaper</option>
-                <option>Taschenbuch</option>
-                <option>Lexikon</option>
-                <option selected="selected">Hardcover</option>
-                <option>Paperback</option>
-            </select><br/><br/>
-            Genre  
-            <br/>
-            <input type="checkbox" name="genre" value="Horror" checked="checked"><label>Horror</label><br/>
-            <input type="checkbox" name="genre" value="Psycho"><label>Psycho</label><br/>
-            <input type="checkbox" name="genre" value="Krimi"><label>Krimi</label><br/>
-            <input type="checkbox" name="genre" value="Doku"><label>Doku</label><br/>
-            <input type="checkbox" name="genre" value="Komödie"><label>Komödie</label><br/>
-            <input type="checkbox" name="genre" value="Romanze"><label>Romanze</label><br/>
-            </fieldset>
-            <br/><br/>
-            <fieldset><legend>Art des Buches : </legend>
-            Favorit makieren : <input type="checkbox" name="filmfavorit" /><br/><br/>
+            <div id="bookdata">
+                <div class="formtext">Buchtitel</div>      <div><input class="inpt" type="text" name="titel" /></div>  <br/><br/>
+                <div class="formtext">Buchautor</div> <div> <input class="inpt"  type="text" name="autor" /></div>   <br/><br/>
+                <div class="formtext">ISBN</div> <div><input class="inpt"  type="number" name="isbn" /></div>  <br/><br/>
+                <div class="formtext">Kapitel</div><div><input class="inpt"  type="number" name="kapitel" /></div> <br/><br/>
+                <div class="formtext">Erscheinungsjahr</div><div><input class="inpt"  type="number" name="jahr" /></div> <br/><br/>
+                <div class="formtext">Auflage</div><div><input class="inpt"  type="number" name="auflage" /></div> <br/><br/>
+                <div class="formtext">Art des Buches</div><div><select class="inpt"  name="art">
+                        <option>eBook</option>
+                        <option>Newspaper</option>
+                        <option>Taschenbuch</option>
+                        <option>Lexikon</option>
+                        <option selected="selected">Hardcover</option>
+                        <option>Paperback</option>
+                    </select></div><br/><br/>
+                <div class="formtext" >Genre</div>
+                <br/>
+                <div style="float:left">
+                    <div id="leftbox">
+                        <input class="inpt2" type="checkbox" name="genre" value="Horror" checked="checked"><span class="formtext21">Horror</span> <br/>
+                        <input class="inpt2" type="checkbox" name="genre" value="Psycho"><span class="formtext21">Psycho</span><br/>
+                        <input class="inpt2" type="checkbox" name="genre" value="Krimi"><span class="formtext21">Krimi</span><br/>
+                    </div>
+                    <div id="rightbox">
+                        <input class="inpt2" type="checkbox" name="genre" value="Doku"><span class="formtext22">Doku</span><br/>
+                        <input class="inpt2" type="checkbox" name="genre" value="Komödie"><span class="formtext22">Komödie</span><br/>
+                        <input class="inpt2" type="checkbox" name="genre" value="Romanze"><span class="formtext22">Romanze</span><br/>
+                    </div>
+                </div>
+                <br/><br/>
 
-             Vorname : <input type="text" name="vorname"/><br/><br/>
-             Nachname : <input type="text" name="nachname" /><br/><br/>
-            <input type="submit" value="Absenden" onclick="alert('erfolgreich gesendet')"/>
-            </fieldset>
+            </div>
+            <div id="personaldata">
+                Vorname <input class="inptpd" type="text" name="vorname"/><br/><br/>
+                Nachname <input class="inptpd" type="text" name="nachname" /><br/><br/>
+                Favorit makieren <input id="favbox" type="checkbox" name="filmfavorit" /><br/><br/>
+            </div>
+            <button type="submit" id="submitbtn" >Absenden</button>
+
         </form>
-        </div>
+
     </body>
 </html>
