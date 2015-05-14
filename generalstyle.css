@@ -10,7 +10,14 @@ body{
 }
 h1{
     text-align: center;
+    color:rgb(0,0,0);
     font-size: 22px;
+}
+#bookentrytitle{
+    text-align: center;
+    color:rgb(63,72,204); 
+    font-size: 22px;
+    font-weight: bolder;
 }
 
 h2{
@@ -22,8 +29,34 @@ h3{
     text-align: center;
     font-size: 18px;
 }
+.coloredletter{
+    color:rgb(63,72,204);
+}
 #heartimg{
-    border: 10px rgb(63,72,204);
+    border: 10px solid rgb(63,72,204);
+    background-color: black;
+    width:400px;
+    height: 245px;
+
+}
+#navblock{
+    color:black;
+    font-size:18px;
+    border: 10px solid rgb(63,72,204);
+    text-align: center;
+    width:300px;
+    margin:auto;
+    
+}
+#navblock a{
+    color: black;
+    text-decoration: none;
+    background-color: rgb(0,162,232);
+    display: block;
+}
+#navblock a:hover{
+    background-color: rgb(63,72,204);
+    display: block;
 }
 /*
 label{
@@ -45,14 +78,20 @@ input {
 }
 */
 #bookdata{
+    position: absolute;
     float:left;
     margin-left: 200px;
-    width: 500px;
+    width: 400px;
 }
 #personaldata{
+    position: absolute;
     float:left;
-    margin-left: 200px;
-    width: 500px;
+    margin-left: 700px;
+    width: 400px;
+}
+#favbox{
+    position: absolute;
+    margin-left:65px;
 }
 .formtext{
     float:left;
@@ -60,18 +99,22 @@ input {
 }
 
 .inpt{
+    text-align: right;
     float:right;
     font-size: 16px;
     width: 200px;
 }
+#bookdata select{
+    text-align: right;
+    float:right;
+    padding-left:15%;
+}
 #leftbox{
     float:left;
-    margin-left:50px;
 }
 #rightbox{
-    float:right;
+    float:left;
     margin-left:100px;
-    width: 250px;
 }
 
 
@@ -101,17 +144,14 @@ input {
     font-size: 16px;
     width: 200px;
 }
-#favbox{
-    position: absolute;
-    margin-left:164px;
-}
+
 
 #submitbtn {
     width:250px;
     border: 3px solid rgb(63,72,204);
-    margin-left: 50%;
+    margin-left: 600px;
     text-align: center;
     font-size: 18px;
     background-color: rgb(0,162,232);
-
+    color:rgb(63,72,204);
 }
