@@ -1,0 +1,43 @@
+*{
+    text-align: center;
+    font-size: 16px;
+}
+#booktable_horror{
+    position: absolute;
+    top: 150px;
+    left:500px;
+}
+#booktable_roman{
+    display: none;
+    position: absolute;
+    top: 150px;
+    left:500px;
+}
+
+#bookswitch{
+    margin-left: 350px;
+    border:10px solid rgb(63,72,204);
+    width:904px;
+    height:30px;
+}
+#bookswitch a{
+    text-decoration: none;
+    color:black;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-top: 1px;
+    padding-bottom: 13px;
+}
+#bookswitch a:hover{
+    //    text-decoration: none;
+    background-color: rgb(63,72,204);
+    //    color:black;
+}
+#opt1{
+    background-color: rgb(63,72,204);
+
+}
+#opt2{
+    background-color: rgb(0,162,232);
+
+}

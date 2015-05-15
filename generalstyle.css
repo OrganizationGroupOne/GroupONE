@@ -14,7 +14,10 @@ h1{
     font-size: 22px;
 }
 #bookentrytitle{
-    text-align: center;
+    text-align:left;
+    margin-left:395px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     color:rgb(63,72,204); 
     font-size: 22px;
     font-weight: bolder;
@@ -32,6 +35,12 @@ h3{
 .coloredletter{
     color:rgb(63,72,204);
 }
+#bodycontent{
+    text-align: left;
+    margin-left: 450px;
+    width: 800px;
+}
+
 #heartimg{
     border: 10px solid rgb(63,72,204);
     background-color: black;
@@ -58,25 +67,7 @@ h3{
     background-color: rgb(63,72,204);
     display: block;
 }
-/*
-label{
-    display: inline-block;
-    float: right;
-    clear: right;
-    width: 250px;
-    text-align: left;
-}
-*/
 
-/*
-input {
-    display: inline-block;
-    position: absolute;
-    left: 200px;
-    clear: right;
-
-}
-*/
 #bookdata{
     position: absolute;
     float:left;
