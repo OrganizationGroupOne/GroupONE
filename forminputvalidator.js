@@ -1,7 +1,12 @@
 
 function chkBookAddFormular() {
-    if (document.bookadd.vorname.value == "") {
-        alert("Bitte Vorname eingeben!");
+/*
+    letters = /^[A-Za-zÖöÄäÜü]+$/;
+    if (document.bookadd.vorname.value == "" || !document.bookadd.vorname.value.match(letters)
+	|| document.bookadd.vorname.value == "" || !document.bookadd.vorname.value.match(letters) 
+	|| document.bookadd.nachname.value == "" || !document.bookadd.nachname.value.match(letters)
+	|| document.bookadd.buchautor.value == "" || !document.bookadd.buchautor.value.match(letters)) {
+        alert("Einige Eingaben sind fehlerhaft. Bitte überprüfen Sie ihre Eingaben!");
         document.bookadd.vorname.focus();
         return false;
     }
@@ -43,3 +48,55 @@ function chkBookAddFormular() {
     
     
 }
+function chkBookAddFormular()
+  {
+    //Check Autor, Vorname, Name 
+    letters = /^[A-Za-zÖöÄäÜü]+$/;
+    if (document.bookadd.vorname.value == "" || !document.bookadd.vorname.value.match(letters)
+	|| document.bookadd.vorname.value == "" || !document.bookadd.vorname.value.match(letters) 
+	|| document.bookadd.nachname.value == "" || !document.bookadd.nachname.value.match(letters)
+	|| document.bookadd.buchautor.value == "" || !document.bookadd.buchautor.value.match(letters)) {
+        alert("Einige Eingaben sind fehlerhaft. Bitte überprüfen Sie ihre Eingaben!");
+        document.bookadd.vorname.focus();
+      document.bookadd.vorname.style.borderColor = "red";
+      return false;
+    }
+    if(!buchstaben.test(document.getElementsByName("vorname")[0].value)) {
+      alert("Einige Eingaben sind fehlerhaft. Bitte überprüfen Sie ihre Eingaben");
+      document.getElementsByName("vorname")[0].focus();
+      document.getElementsByName("vorname")[0].style.borderColor = "red";
+      return false;
+    }
+    if(!buchstaben.test(document.getElementsByName("name")[0].value)) {
+      alert("Einige Eingaben sind fehlerhaft. Bitte überprüfen Sie ihre Eingaben");
+      document.getElementsByName("name")[0].focus();
+      document.getElementsByName("name")[0].style.borderColor = "red";
+      return false;
+    }
+    //Ende: Überprüfung der Eingabefelder Autor, Vorname & Name
+*/
+    var isbn = /^[0-9]{13}$/;
+    if( !document.bookadd.vorname.value.match(isbn)){
+      alert("Einige Eingaben sind fehlerhaft. Bitte überprüfen Sie ihre Eingaben");
+      document.bookadd.isbn.focus();
+      document.bookadd.isbn.style.borderColor = "red";
+      return false;
+    }
+    var jahr = /^[0-9]{4}$/;
+    var maxJahr = 2015;
+   if(document.bookadd.jahr.value <= maxJahr || document.bookadd.jahr.value.match(jahr)) {
+       alert("Einige Eingaben sind fehlerhaft. Bitte überprüfen Sie ihre Eingaben");
+       document.bookadd.jahr.focus();
+       document.bookadd.jahr.style.borderColor = "red";
+       return false;
+    }
+    var auflage = /^[0-9]/;
+     if(document.bookadd.jahr.value.match(auflage)) {
+      alert("Einige Eingaben sind fehlerhaft. Bitte überprüfen Sie ihre Eingaben");
+      document.getElementsByName("auflage")[0].focus();
+      document.bookadd.jahr.value.match.style.borderColor = "red";
+      return false;
+    }
+    // Überprüfung war erfolgreich
+    return true;
+  }
