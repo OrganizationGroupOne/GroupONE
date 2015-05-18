@@ -13,13 +13,13 @@
         <form name="bookadd" action="http://martinakraus.net/createBookEntry.php" method="get" onsubmit="return chkBookAddFormular()" autocomplete="on"> 
             <div style="height:350px;">
                 <div id="bookdata">
-                    <div class="formtext">Buchtitel</div>      <div><input class="inpt" type="text" name="titel" /></div>  <br/><br/>
-                    <div class="formtext">Buchautor</div> <div> <input class="inpt"  type="text" name="autor" /></div>   <br/><br/>
-                    <div class="formtext">ISBN</div> <div><input class="inpt"  type="number" name="isbn" /></div>  <br/><br/>
-                    <div class="formtext">Kapitel</div><div><input class="inpt"  type="number" name="kapitel" /></div> <br/><br/>
-                    <div class="formtext">Erscheinungsjahr</div><div><input class="inpt"  type="number" name="jahr" /></div> <br/><br/>
-                    <div class="formtext">Auflage</div><div><input class="inpt"  type="number" name="auflage" /></div> <br/><br/>
-                    <div class="formtext">Art des Buches</div><div><select class="inpt"  name="art">
+                    <div class="formtext">Buchtitel</div><div><input class="inpt" type="text" name="titel" required pattern="[^A-zÄÖÜäöüß0-9%$§ÄäÖöÜü"]{1,60}"  /></div><br/><br/>
+                    <div class="formtext">Buchautor</div><div> <input class="inpt"  type="text" name="autor" required pattern="[a-zA-ZÄäÖöÜü]{1-40}"/></div><br/><br/>
+                    <div class="formtext">ISBN</div> <div><input class="inpt" type="number" name="isbn" required pattern="[0-9]{13}" /></div>  <br/><br/>
+                    <div class="formtext">Kapitel</div><div><input class="inpt"  type="number" name="kapitel" required /></div> <br/><br/>
+                    <div class="formtext">Erscheinungsjahr</div><div><input class="inpt"  type="number" name="jahr" required pattern="[0-9]{4}"/></div> <br/><br/>
+                    <div class="formtext">Auflage</div><div><input class="inpt"  type="number" name="auflage" required pattern="[0-9]{1}"/></div><br/><br/>
+                    <div class="formtext">Art des Buches</div><div><select class="inpt"  name="art" required>
                             <option>eBook</option>
                             <option>Newspaper</option>
                             <option>Taschenbuch</option>
@@ -45,12 +45,12 @@
 
                 </div>
                 <div id="personaldata">
-                    Vorname <input class="inptpd" type="text" name="vorname"/><br/><br/>
-                    Nachname <input class="inptpd" type="text" name="nachname" /><br/><br/>
+                    Vorname <input class="inptpd" type="text" name="vorname" required pattern="[a-zA-ZÄÖÜäöüß]{1,60}" /><br/><br/>
+                    Nachname <input class="inptpd" type="text" name="nachname" required pattern="[a-zA-ZÄÖÜäöüß]{1,60}" /><br/><br/>
                     Favorit makieren <input id="favbox" type="checkbox" name="filmfavorit" /><br/><br/>
                 </div>
             </div>
-            <button type="submit" id="submitbtn" >Absenden</button>
+            <input type="submit" id="submitbtn"  value="Absenden"/>
 
         </form>
 

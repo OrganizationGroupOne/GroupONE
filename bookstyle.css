@@ -4,18 +4,18 @@
 }
 #booktable_horror{
     position: absolute;
+    margin-left: 15%;
     top: 150px;
-    left:500px;
 }
 #booktable_roman{
     display: none;
     position: absolute;
+    margin-left: 15%;
     top: 150px;
-    left:500px;
 }
 
 #bookswitch{
-    margin-left: 350px;
+    margin-left: 15%;
     border:10px solid rgb(63,72,204);
     width:904px;
     height:30px;
@@ -40,4 +40,15 @@
 #opt2{
     background-color: rgb(0,162,232);
 
+}
+table,th,td{
+    border-collapse: collapse;
+    border: 3px solid rgb(63,72,204);
+    
+}
+th{
+   color:black; 
+}
+td{
+    font-weight: normal;
 }
