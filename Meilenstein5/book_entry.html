@@ -10,11 +10,11 @@
     </head>
     <body>
         <h1 id="bookentrytitle">Buch anlegen</h1>
-        <form name="bookadd" action="buchanlegen.php" method="get" onsubmit="return chkBookAddFormular()" autocomplete="on"> 
+        <form name="bookadd" action="buchanlegen.php" method="get"  autocomplete="on"> 
             <div style="height:350px;">
                 <div id="bookdata">
-                    <div class="formtext">Buchtitel</div><div><input class="inpt" type="text" name="titel" required pattern="[^A-zÄÖÜäöüß0-9%$§ÄäÖöÜü"]{1,60}"  /></div><br/><br/>
-                    <div class="formtext">Buchautor</div><div> <input class="inpt"  type="text" name="autor" required pattern="[a-zA-ZÄäÖöÜü]{1-40}"/></div><br/><br/>
+                    <div class="formtext">Buchtitel</div><div><input class="inpt" type="text" name="titel" required pattern="[a-zA-Z0-9]{1,60}"  /></div><br/><br/>
+                    <div class="formtext">Buchautor</div><div> <input class="inpt"  type="text" name="autor" required pattern="[a-zA-Z]{1,40}"/></div><br/><br/>
                     <div class="formtext">ISBN</div> <div><input class="inpt" type="number" name="isbn" required pattern="[0-9]{13}" /></div>  <br/><br/>
                     <div class="formtext">Kapitel</div><div><input class="inpt"  type="number" name="kapitel" required /></div> <br/><br/>
                     <div class="formtext">Erscheinungsjahr</div><div><input class="inpt"  type="number" name="jahr" required pattern="[0-9]{4}"/></div> <br/><br/>
