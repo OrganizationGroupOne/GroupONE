@@ -26,7 +26,7 @@
         
 			while ($row = mysql_fetch_object($ergebnis)) {
             
-			echo "<tr><td>$row["isbn"]</td> <td>$row["titel"]</td> <td>$row[autor]</td> <td>$row[kapitel]</td> <td>$row[auflage]</td> <td>$row[jahr]</td> <td>$row[buchart]</td></tr>";
+			echo "<tr><td>$row->isbn</td> <td>$row->titel</td> <td>$row->autor</td> <td>$row->kapitel</td> <td>$row->auflage</td> <td>$row->jahr</td> <td>$row->buchart</td></tr>";
         }
         
 			echo "</table>";
