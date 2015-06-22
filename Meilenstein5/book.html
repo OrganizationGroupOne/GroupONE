@@ -20,13 +20,13 @@
                 var xml = new XMLHttpRequest();
                 
                         // horror_books wird geladen.
-                        xml.open("GET", "jsonfiles/horror_books.json", false);
+                        xml.open("GET", "horror_books.json", false);
                         xml.send();
                         var horror = JSON.parse(xml.responseText);
                         horror = horror.horrordata;
                         
                         // roman_books wird geladen.
-                        xml.open("GET", "jsonfiles/roman_books.json", false);
+                        xml.open("GET", "roman_books.json", false);
                         xml.send();
                         var roman = JSON.parse(xml.responseText);
                         roman = roman.romandata;
@@ -103,5 +103,7 @@
                 document.getElementById('opt2').setAttribute('style', 'background-color: rgb(63,72,204);');
             };
         </script>
+		
+		<a href="index.html">zurück</a>
     </body>
 </html>
