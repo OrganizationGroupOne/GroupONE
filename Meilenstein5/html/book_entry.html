@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<script language="javascript" type="text/javascript" src="../js/book_entry.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/book_entry.css"/>
+	<title>Buch anlegen</title>
+</head>
+<body>
+
+	<div class="formular">
+		<h1>Buch anlegen</h1>
+	<form action="../php/buchanlegen.php" method="get" > <!--onsubmit="return checkEntries();-->
+		<div class="links">
+			<p>Buchtitel <input class="textbox" type="text" name="titel"></p>
+			<p>Buchautor <input class="textbox" type="text" name="autor"></p>
+			<p>ISBN <input class="textbox" type="number" maxlength="13" name="isbn"></p>
+			<p>Kapitel <input class="textbox" type="number" min="0" name="kapitel"></p>
+			<p>Erscheinungsjahr <input class="textbox" type="number" name="jahr"></p>
+			<p>Auflage <input class="textbox" type="number"  min="0" name="auflage"></p>
+			<p>Art des Buches
+				<select name="art">
+					<option value="eBook">eBook</option>
+					<option value="Newspaper">Newspaper</option>
+					<option value="Taschenbuch">Taschenbuch</option>
+					<option value="Lexikon">Lexikon</option>
+					<option value="Hardcover" selected="selected">Hardcover</option>
+					<option value="Paperback">Paperback</option>
+				</select>
+			</p>
+		</div>	
+			
+		<div class="rechts">
+			<p>Mein Vorname <input class="textbox" type="text" name="vorname"></p>
+			<p>Mein Nachname <input class="textbox" type="text" name="name"></p>
+			<p>Mein Favorit <input class="favorit" type="checkbox" name="filmfavorit"></p>
+		</div>
+		<div class ="checkbox">
+			<div class="genrewahl">
+				Genre 
+			</div>
+				<div class="checkfeld1">
+					<input type="checkbox" name="genre" value="Horror" checked="checked"> Horror<br>
+					<input type="checkbox" name="genre" value="Psycho"> Psycho<br>
+					<input type="checkbox" name="genre" value="Krimi"> Krimi<br>
+				</div>
+				<div class="checkfeld2">
+					<input type="checkbox" name="genre" value="Komoedie"> Komödie<br>
+					<input type="checkbox" name="genre" value="Doku"> Doku<br>
+					<input type="checkbox" name="genre" value="Romanze"> Romanze<br>
+				</div>
+			</div>
+		<div class="button">
+			<button type="submit" name="submit">Absenden</button>
+		</div>
+	</form>
+</div>
+</body>
+</html>

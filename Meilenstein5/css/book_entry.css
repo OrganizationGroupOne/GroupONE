@@ -1,0 +1,82 @@
+body{
+	font-family:arial;
+	font-weight:bold;
+	background-color:rgb(153,217,234);
+}
+
+h1{
+	margin-left: 12%;
+	font-size: 22px;
+	color:rgb(63,72,204);
+}
+
+select{
+	float: right;
+	width: 172px;
+	margin-left: 35px;
+}
+
+.formular{
+	margin-left: 10%;
+	color:rgb(63,72,204);
+	font-size: 16px;
+}
+
+.links{
+	float: left;
+}
+
+.rechts{
+	float: left;
+	margin-left: 10%;
+}
+
+.textbox{
+	margin-left: 35px;
+	float: right;
+}
+
+.checkbox{
+	margin-top: 0px;
+	clear: both;
+	color: black;
+}
+
+.favorit{
+	margin-left: 35px;
+}
+
+.genrewahl{
+	float: left;
+	color: rgb(63,72,204);
+}
+
+.checkfeld1{
+	float: left;
+	margin-left: 100px;
+	font-size: 14px;
+}
+
+.checkfeld2{
+	float: left;
+	margin-left:7%;
+	font-size: 14px;
+}
+
+.button{
+	clear: both;
+	margin-top: 20px;
+}
+
+button{
+	margin-top: 50px;
+	margin-left: 35%;
+	border: 2px solid rgb(63,72,204);
+	background-color: rgb(0,162,232);
+	color: rgb(63,72,204);
+	padding-left: 100px;
+	padding-right: 100px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-weight: bold;
+}

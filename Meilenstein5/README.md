@@ -1,2 +1,0 @@
-# GroupONE
-WAW PROJECT GROUP
