@@ -12,7 +12,9 @@
 		
 		if($autor == "" || $titel == "" || $kapitel == "" || $buchart == "" || $isbn == "" || $jahr == "" || $auflage == "") {
 			echo "Bitte geben Sie alle Daten ein";
-		} else {
+		} else if($autor == "/^[a-zA-Z ]*$/" || $titel == "/^[a-zA-Z ]*$/" || $kapitel == "/^[a-zA-Z ]*$/" || $buchart == "/^[a-zA-Z ]*$/" || $isbn == "/^[0-9]{13}/" || $jahr == "/^[0-9]{4}/" || $auflage == ""){
+                        }
+                        else{
 			$query = "INSERT INTO myBooks.buch
 						(autor, titel, kapitel, jahr, auflage, buchart, isbn)
 						VALUES(:autor, :titel, :kapitel, :jahr, :auflage, :buchart, :isbn)";
